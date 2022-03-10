@@ -37,8 +37,10 @@ export default {
   height: 100vh;
   background-color: rgb(23,34,45);
   padding: 20px 100px;
+  overflow: scroll;
 
     .card-wrapper{
+      height: 360px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;

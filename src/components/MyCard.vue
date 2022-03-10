@@ -20,10 +20,11 @@ export default {
 
 <style lang="scss" scoped>
 .card{
-    min-height: 360px;
-    width: calc(100% / 6);
+    height: 360px;
+    width: 200px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     color: white;
     background-color: rgb(35,44,54);
@@ -32,8 +33,8 @@ export default {
 
 
     figure{
-        aspect-ratio: 1;
-        width: 100%;
+        width: 160px;
+        height: 160px;
         flex-shrink: 1;
         margin-bottom: 15px;
 
@@ -45,7 +46,7 @@ export default {
 
     h1{
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: 25px;
         margin-bottom: 20px;
     }
 
