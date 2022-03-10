@@ -6,6 +6,8 @@
 
 <script>
 import MyMain from './components/MyMain.vue'
+import "@fontsource/abel"
+
 
 export default {
   name: 'App',
@@ -20,6 +22,7 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Abel";
 }
 
 img {
