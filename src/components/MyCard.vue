@@ -24,7 +24,6 @@ export default {
     width: 200px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     color: white;
     background-color: rgb(35,44,54);

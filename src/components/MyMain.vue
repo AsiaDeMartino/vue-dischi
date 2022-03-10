@@ -34,9 +34,10 @@ export default {
 
 <style lang="scss" scoped>
 .main{
+  margin: 0 auto;
   height: 100vh;
   background-color: rgb(23,34,45);
-  padding: 20px 100px;
+  padding: 150px 200px;
   overflow: scroll;
 
     .card-wrapper{
