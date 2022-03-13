@@ -21,37 +21,36 @@ export default {
 <style lang="scss" scoped>
 .card{
     height: 360px;
-    width: 200px;
+    width: calc(100% / 6);
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
     background-color: rgb(35,44,54);
-    padding: 20px;
+    padding: 2%;
     text-align: center;
 
 
     figure{
-        width: 160px;
-        height: 160px;
-        flex-shrink: 1;
+        aspect-ratio: 1;
+        width: 100%;
         margin-bottom: 15px;
 
         img{
             height: 100%;
-            object-fit: cover;
+            
         }
     }
 
     h1{
         text-transform: uppercase;
-        font-size: 25px;
+        font-size: 1.5em;
         margin-bottom: 20px;
     }
 
     span{
         color: grey;
-        font-size: 15px;
+        font-size: 1em;
         margin-bottom: 3px;
     }
 }

@@ -39,15 +39,19 @@ export default {
   background-color: rgb(23,34,45);
   padding: 150px 200px;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
     .card-wrapper{
+      width: 70vw;
       height: 360px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       row-gap: 20px;
-      column-gap: 40px;
+      column-gap: calc(5% / 4);
     }
 }
 </style>
