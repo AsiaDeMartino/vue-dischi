@@ -1,7 +1,7 @@
 <template>
   <div class="select">
       <select v-model="scelta" @change="selezionaGenere">
-        <option selected :value="'Tutti i generi'">Seleziona un genere</option>
+        <option selected>Tutti i generi</option>
         <option :value="'rock'">Rock</option>
         <option :value="'pop'">Pop</option>
         <option :value="'jazz'">Jazz</option>

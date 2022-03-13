@@ -2,7 +2,7 @@
   <div class="main">
     <MySelect @scelta="scelta" :generi="canzoni" />
     <div class="card-wrapper">
-        <MyCard :class="prova2(i) ? '' : 'nascondi'" v-for="(items, i) in canzoni.response" :key="i" :items="items"/>
+        <MyCard :class="genereSelezionato(i) ? '' : 'nascondi'" v-for="(items, i) in canzoni.response" :key="i" :items="items"/>
     </div>
     
   </div>
@@ -23,18 +23,18 @@ export default {
   data() {
     return {
       canzoni: [],
-      prova1:'Tutti i generi',
+      genere:'Tutti i generi',
     }
   },
   methods:{
     scelta: function(selezione){
        console.log(selezione)
-       this.prova1=selezione
+       this.genere=selezione
     },
-    prova2: function(j){
-      if (this.prova1 == (this.canzoni.response[j].genre).toLowerCase()) {
+    genereSelezionato: function(j){
+      if (this.genere == (this.canzoni.response[j].genre).toLowerCase()) {
         return(true)
-      } else if (this.prova1 == 'Tutti i generi'){
+      } else if (this.genere == 'Tutti i generi'){
         return(true)
       } else {
         return(false)
