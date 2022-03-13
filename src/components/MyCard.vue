@@ -26,7 +26,7 @@ export default {
     flex-direction: column;
     align-items: center;
     color: white;
-    background-color: rgb(35,44,54);
+    background-color: rgba(white,0.1);
     padding: 2%;
     text-align: center;
 

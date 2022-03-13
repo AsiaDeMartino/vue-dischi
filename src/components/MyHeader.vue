@@ -19,7 +19,7 @@ export default {
 .header{
     height: 70px;
     width: 100vw;
-    background-color: rgb(35,44,54);
+    background-color: rgba(white,0.1);
     display: flex;
     align-items: center;
     position: fixed;

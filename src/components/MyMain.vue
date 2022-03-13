@@ -1,7 +1,8 @@
 <template>
   <div class="main">
+    <MySelect @scelta="scelta" :generi="canzoni" />
     <div class="card-wrapper">
-        <MyCard v-for="(items, i) in canzoni.response" :key="i" :items="items"/>
+        <MyCard :class="prova2(i) ? '' : 'nascondi'" v-for="(items, i) in canzoni.response" :key="i" :items="items"/>
     </div>
     
   </div>
@@ -10,16 +11,34 @@
 <script>
 import axios from 'axios'
 import MyCard from './MyCard.vue'
+import MySelect from './MySelect.vue'
 
 export default {
   name: 'MyMain',
   components: {
-    MyCard
+    MyCard,
+    MySelect,
   },
 
   data() {
     return {
       canzoni: [],
+      prova1:'Tutti i generi',
+    }
+  },
+  methods:{
+    scelta: function(selezione){
+       console.log(selezione)
+       this.prova1=selezione
+    },
+    prova2: function(j){
+      if (this.prova1 == (this.canzoni.response[j].genre).toLowerCase()) {
+        return(true)
+      } else if (this.prova1 == 'Tutti i generi'){
+        return(true)
+      } else {
+        return(false)
+      }
     }
   },
   created() {
@@ -52,6 +71,10 @@ export default {
       align-items: center;
       row-gap: 20px;
       column-gap: calc(5% / 4);
+    }
+
+    .nascondi{
+      display: none;
     }
 }
 </style>
